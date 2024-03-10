@@ -87,7 +87,7 @@ chmod +x ./vault
 sudo mv ./vault /usr/local/bin/vault
 ```
 
-Caso vá prosseguir utilizando o CLI é necessário configurar a variável de ambiente VAULT\_ADDR. Mas primeiro é necessário verificar em qual endereço interno o serviço está executando:
+Caso vá prosseguir utilizando o CLI, é necessário configurar a variável de ambiente VAULT\_ADDR. Mas primeiro é necessário verificar em qual endereço interno o serviço está executando:
 
 ```plaintext
 kubectl get svc   #Para verificar o serviço vault
