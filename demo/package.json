@@ -1,0 +1,11 @@
+{
+  "name": "Demo Vault",
+  "version": "1.0.0",
+  "description": "Uma pequena aplicação Node.js para ler uma secret no Kubernetes e exibi-la em uma página HTML",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Ricardo, Alvaro, Jailson, Adriano e Clodoaldo",
+  "license": "Nossas regras"
+}

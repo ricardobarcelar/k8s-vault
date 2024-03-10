@@ -1,0 +1,49 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo
+  namespace: default
+  labels:
+    app: demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demo
+  template:
+    metadata:
+      labels:
+        app: demo
+    spec:
+      containers:
+        - name: demo
+          image: demo:v1
+          ports:
+            - containerPort: 3000
+          env:
+            - name: USER
+              valueFrom:
+                secretKeyRef:
+                  name: devops-geia
+                  key: user
+            - name: SENHA
+              valueFrom:
+                secretKeyRef:
+                  name: devops-geia
+                  key: senha
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+ name: demo
+ namespace: default
+spec:
+ selector:
+   app: demo
+ ports:
+   - name: http
+     protocol: TCP
+     port: 3000
+     targetPort: 3000
