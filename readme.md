@@ -230,7 +230,7 @@ kubectl get secret devops-geia -o yaml
 
 **Demonstração de uso**
 
-Para demonstrar que tudo que explanamos acima funciona a contanto, desenvolvemos uma pequena aplicação JavaScritp buscando as secrets inseridas no Vault e sincronizadas no kubernetes. Esta aplicação será implantada no kubernetes, fará a leitura de duas variáveis (user e senha) e as exibirá em tela, a título de exemplo.
+Para demonstrar que tudo que explanamos acima funciona a contento, desenvolvemos uma pequena aplicação JavaScritp buscando as secrets inseridas no Vault e sincronizadas no kubernetes. Esta aplicação será implantada no kubernetes, fará a leitura de duas variáveis (user e senha) e as exibirá em tela, a título de exemplo.
 
 Criamos uma imagem a partir do diretório demo:
 
