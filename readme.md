@@ -70,7 +70,7 @@ A documentação do Hashicorp Vault é bastante completa em relação a implanta
 *   https://github.com/hashicorp/vault-helm
 *   https://developer.hashicorp.com/vault/downloads
 
-Para facilitar a iteração com o Vault é possível fazer uso de uma CLI. Em que pese seja possíve utilizar a própria interface gráfica do Vault ou executar os comandos por meio de comandos dentro do próprio container.
+Para facilitar a iteração com o Vault é possível fazer uso de uma CLI, em que pese seja possíve utilizar a própria interface gráfica do Vault ou executar os comandos por meio de comandos dentro do próprio container.
 
 A instalação do CLI pode ser realizada pelos seguintes comandos:
 
