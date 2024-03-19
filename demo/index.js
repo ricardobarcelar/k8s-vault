@@ -13,8 +13,10 @@ const server = http.createServer((req, res) => {
             <title>Secret Kubernetes</title>
         </head>
         <body>
-            <h1>Usuario: ${user}</h1>
-            <h1>Senha: ${senha}</h1>
+            <h1>Segredos obtidos do Vault</h1>
+            <br/>
+            <h2>Usuario: ${user}</h2>
+            <h2>Senha: ${senha}</h2>
         </body>
         </html>
     `;
