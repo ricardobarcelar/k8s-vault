@@ -226,6 +226,7 @@ Estando tudo certo, é possível constatar a criação de uma nova secret no kub
 ```plaintext
 kubectl get secret
 kubectl get secret devops-geia -o yaml
+kubectl get pods -n external-secrets
 ```
 
 **Demonstração de uso**
