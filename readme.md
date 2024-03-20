@@ -56,6 +56,9 @@ kubectl config get-contexts
 kind delete cluster --name devops
 ```
 
+<img src="/imagens/nos-cluster-kind.png">
+
+
 **Implantação do Vault**
 
 A implantação do Hashicorp Vault se dará utilizando Helm. _Helm_ é um gerenciador de pacotes para Kubernetes que inclui todos os códigos e recursos necessários para implantar uma aplicação.
@@ -174,6 +177,8 @@ vault kv put devops/geia user=admin senha=12345
 vault kv get devops/geia    #Teste para obter o segredo
 ```
 
+<img src="/imagens/vault-screen.png">
+
 Uma vez que o Hashicorp Vault está configurado e com segredos armazenados, partimos para etapa em que é necessário configurar a vinculação do Vault e o ambiente kubernetes. Para isso utilizaremos o External Secret Operator.
 
 **External Secret Operator**
@@ -220,6 +225,9 @@ Pronto, agora verificaremos se está tudo ok e sincronizando por meio dos seguin
 kubectl get clustersecretstore
 kubectl get externalsecret
 ```
+<img src="/imagens/clusterSecretStore.png">
+
+<img src="/imagens/externalsecret.png">
 
 Estando tudo certo, é possível constatar a criação de uma nova secret no kubernetes referente secret armazenada no vault:
 
@@ -262,3 +270,8 @@ Basta agora acessar o navegador de internet e verificar as secrets inseridas.
 ```plaintext
 http://localhost:3000
 ```
+<img src="/imagens/demo.png">
+
+Não demonstramos nesta aplicação, mas fica registrado que a forma de obtenção das secrets apresentada não é a única. É possível ainda que a estratégia de obtenção de secrets utilize a API do Hashicorp Vault.
+
+<img src="/imagens/requestApi.png">
