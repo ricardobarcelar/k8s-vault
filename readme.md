@@ -1,5 +1,13 @@
 **Hashicorp Vault para gerenciamento de Segredos em ambiente Kubernetes**
 
+Autores:
+- RICARDO RODRIGUES BARCELAR
+- ADRIANO AFONSO CARVALHO
+- JAILSON SALES RIBEIRO
+- ALVARO CLARO DOS ANJOS
+- ZENILDO CRISÓSTOMO DO PRADO
+- CLODOALDO BARBOSA MORAES
+
 **Motivação**
 
 O HashiCorp Vault é uma ferramenta para gerenciamento de segredos, proteção de dados e controle de acesso. Integrá-lo ao Kubernetes traz diversos benefícios, incluindo o gerenciamento centralizado de segredos sensíveis como senhas de banco de dados, chaves de API, certificados TLS e outros dados sensíveis.
