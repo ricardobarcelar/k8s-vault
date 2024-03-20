@@ -196,10 +196,12 @@ helm repo add external-secrets https://charts.external-secrets.io
 helm install external-secrets external-secrets/external-secrets -n external-secrets --create-namespace --set installCRDs=true
 ```
 
-Dos conceitos importantes do External Secret Operator, destacamos 2 que representam objetos kubernetes necessários para sincronização com o vault:
+Dos conceitos importantes do External Secret Operator, destacamos três que representam objetos kubernetes necessários para sincronização com o vault:
 
 *   **ExternalSecret:** _Qual secret se deseja ter acesso_
 *   **SecretStore e ClusterSecretStore:** _Como ter acesso ao secret dentro do vault_
+
+<img src="https://picluster.ricsanfre.com/assets/img/vault-externalsecrets.png">
 
 Antes de iniciarmos a implantação desses objetos, primeiro vamos criar uma secret no kubernetes para armazenar o token que criamos em etapas anteriores e nos proporcionará a autenticação para acesso ao vault.
 
