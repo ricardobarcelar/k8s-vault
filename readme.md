@@ -24,6 +24,12 @@ Embora os segredos do Kubernetes sejam uma opção válida para muitos cenários
 
 Para demonstrar a implantação do Hashicorp Vault optaremos por executar um cluster Kubernetes localmente usando “nós” de contêiner do Docker. Para tanto usaremos o **kinD** (https://kind.sigs.k8s.io/), uma solução projetada para testar o próprio Kubernetes, mas pode ser usada para desenvolvimento local ou CI.
 
+Pré-requisitos (pré instalar):
+- Docker
+- Git
+
+~ > git clone https://github.com/ricardobarcelar/k8s-vault.git
+
 **Preparação do ambiente local**
 
 1\. Instalar kinD
