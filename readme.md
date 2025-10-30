@@ -1,13 +1,5 @@
 **Hashicorp Vault para gerenciamento de Segredos em ambiente Kubernetes**
 
-Autores:
-- RICARDO RODRIGUES BARCELAR
-- ADRIANO AFONSO CARVALHO
-- JAILSON SALES RIBEIRO
-- ALVARO CLARO DOS ANJOS
-- ZENILDO CRISÓSTOMO DO PRADO
-- CLODOALDO BARBOSA MORAES
-
 **Motivação**
 
 O HashiCorp Vault é uma ferramenta para gerenciamento de segredos, proteção de dados e controle de acesso. Integrá-lo ao Kubernetes traz diversos benefícios, incluindo o gerenciamento centralizado de segredos sensíveis como senhas de banco de dados, chaves de API, certificados TLS e outros dados sensíveis.
@@ -158,10 +150,15 @@ token_accessor      AKG0jnHfQCaTNzoEq8Ihy0se
 vault policy write geia-policy geia-policy.hcl
 ```
 
-Além disso, vamos criar um token vinculando esta policy. Será este o token a ser usado sempre que uma requisição for realizada ao Vault.
+Uma configuração útil é aumentar o tempo máximo de vida do token. Para alterar o tempo máximo de vida do token para 1 ano, depois de logado no vault executar o seguinte comando:
+```plaintext
+vault write sys/auth/token/tune max_lease_ttl=8760h
+```
+
+Além disso, vamos criar um token vinculando esta policy. Este token será usado sempre que uma requisição for realizada ao Vault. Para criar um token com validade de 1 ano execute o comando:
 
 ```plaintext
-vault token create -policy=geia-policy
+vault token create -policy=geia-policy -ttl=8760h
 
 Retorno:
 Key                 Value
